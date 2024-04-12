@@ -1,0 +1,74 @@
+ [
+    {
+      "image": "https://i.ibb.co/N9R76Q2/h1.jpg",
+      "estate_title": "Luxury Family Home in Suburban Paradise",
+      "Id": "RES001",
+      "segment_name": "Single-family homes",
+      "description": "Experience the epitome of luxury living in our exquisite family home nestled in a suburban paradise. With spacious interiors, modern amenities, and meticulous attention to detail, our property offers the perfect retreat for discerning families seeking comfort and style. Enjoy tranquil surroundings, lush gardens, and private outdoor spaces, all within reach of urban conveniences. Whether you're lounging by the pool, hosting a gourmet dinner in the chef's kitchen, or unwinding in the lavish master suite, every moment in our luxury home promises unparalleled relaxation and indulgence. Welcome to your suburban sanctuary.",
+      "price": "$2,000,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Greenwood , California",
+      "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/hYhFDsG/h5.jpg",
+      "estate_title": "Cozy Townhouses with Garden",
+      "Id": "RES002",
+      "segment_name": "Townhouses",
+      "description": "Discover the charm and convenience of townhouse living with our meticulously designed properties. Offering a blend of modern amenities and classic architecture, our townhouses provide the perfect balance of comfort and style. Enjoy spacious interiors, sleek finishes, and versatile floor plans tailored to contemporary lifestyles. With convenient access to urban amenities and vibrant neighborhoods, our townhouses offer an ideal urban retreat for individuals and families alike. Welcome home to a lifestyle of convenience, comfort, and sophistication.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Sunset Valley, Texas",
+      "facilities": ["living room", "garden", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/X4j0wbF/h3.jpg",
+      "estate_title": "Modern Apartment with City Views",
+      "Id": "RES003",
+      "segment_name": "Apartments",
+      "description": "Elevate your urban living experience with our modern apartment boasting breathtaking city views. Situated in the heart, our sleek and stylish property offers a luxurious retreat amidst the vibrant energy of the city. From the sleek design to the high-end finishes, every detail of our apartment exudes contemporary elegance. Enjoy expansive windows that frame stunning cityscapes, state-of-the-art amenities, and thoughtfully curated spaces designed for both relaxation and entertainment. Whether you're savoring a morning coffee on the balcony or unwinding in the comfort of your chic living space, our modern apartment promises a lifestyle of sophistication and convenience in the heart of the city.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "Metropolis, New York",
+      "facilities": ["living room", "gym", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/tLfMmNw/h4.jpg",
+      "estate_title": "Elegant Student housing in Historic District",
+      "Id": "RES004",
+      "segment_name": "Student housing",
+      "description": "Experience the epitome of refined student living in our elegant housing nestled within the historic district. Offering a blend of charm and sophistication, our meticulously designed accommodations provide students with a comfortable and inspiring environment to thrive academically and socially. Immerse yourself in the rich heritage of the neighborhood while enjoying modern amenities and stylish interiors tailored to meet the needs of contemporary student life. From spacious communal areas for study sessions to cozy private rooms for relaxation, our housing ensures a seamless balance of academic focus and cultural immersion. Welcome to a distinguished residence where history meets modernity, and students create memories that last a lifetime.",
+      "price": "$1,000/month",
+      "status": "rent",
+      "area": "3200 sq ft",
+      "location": "Heritage V, Massachusetts",
+      "facilities": ["living room", "study", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/xCJ7Mrg/h2.jpg",
+      "estate_title": "Lakefront Retreat with Private Dock",
+      "Id": "RES005",
+      "segment_name": "Senior L.C.",
+      "description": "Welcome to our Senior Living Communities, where vibrant lifestyles meet tailored care in a supportive environment. Designed for those seeking comfort, companionship, and convenience in their golden years, our communities offer a range of amenities and services to enhance quality of life. From beautifully landscaped grounds to thoughtfully designed residences, every aspect of our communities is crafted to promote well-being and independence. Enjoy engaging social activities, delicious dining options, and personalized care plans tailored to individual needs. Whether you're seeking an active retirement or require assistance with daily tasks, our Senior Living Communities provide a warm and welcoming place to call home.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Serenity Shores, Florida",
+      "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+      "image": "https://i.ibb.co/7JMT0xN/h6.jpg",
+      "estate_title": "Spacious Vacation rentals in Skyline Towers",
+      "Id": "RES006",
+      "segment_name": "Vacation rentals",
+      "description": "Welcome to Your Dream House, your ultimate destination for finding the perfect vacation rental. Whether you're planning a weekend getaway, family vacation, or romantic retreat, we offer a diverse selection of curated properties to suit every traveler's needs and preferences. Browse our listings of cozy cabins, beachfront condos, luxurious villas, and more, all equipped with modern amenities and located in prime destinations around the globe. With easy booking and reliable customer support, let us help you turn your dream vacation into reality.",
+      "price": "$5,000/month",
+      "status": "rent",
+      "area": "1800 sq ft",
+      "location": "Skyline Towers, California",
+      "facilities": ["living room", "balcony", "kitchen"]
+    }
+  ]

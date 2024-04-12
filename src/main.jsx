@@ -1,10 +1,81 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
 
+import './index.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import MainLayout from './layouts/MainLayout';
+import Home from './Pages/Home';
+
+
+
+
+
+import ErrorPage from './Components/ErrorPage';
+import Contact from './Pages/Contact';
+import Blogs from './Pages/Blogs';
+import ProfileUpdate from './Pages/ProfileUpdate';
+import ViewProperties from './Pages/ViewProperties';
+import LogIn from './Pages/LogIn';
+import Register from './Pages/Register';
+import AuthProvider from './providers/AuthProvider';
+import PrivateRoute from './routes/PrivateRoute';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout/>,
+    errorElement:<ErrorPage/>,
+    children:[
+      {
+        index: true,
+        element: <Home/>,
+        loader: () => fetch('/estate.json')
+      },
+      {
+          path: "/property/:Id",
+          element: <PrivateRoute><ViewProperties></ViewProperties></PrivateRoute>,
+          loader: () => fetch('/estate.json')
+      },
+      
+      {
+        path: "/profileUpdate",
+        loader: () => fetch('/estate.json'),
+        element: <ProfileUpdate></ProfileUpdate>,
+        
+      },
+      
+      {
+        path:"/blogs",
+        element: <Blogs></Blogs>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>
+      },
+      {
+        path: "/register",
+        element: <Register> </Register>
+      },
+      
+     
+
+    ]
+  },
+  
+]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
