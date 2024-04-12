@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) =>{
 
     const location = useLocation();
             console.log(location.pathname);
-
+ 
     if (loading) {
         return <span className="loading loading-spinner loading-lg justify-center items-center ml-[650px] mt-44"></span>
     }
