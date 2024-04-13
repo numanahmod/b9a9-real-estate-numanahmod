@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css'
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
@@ -12,8 +14,11 @@ const Navbar = () => {
     logOut()
     .then()
     .catch()
-
+    toast('Your account is logged out')
+    
   }
+
+  
 
    const navLinks =  <>
         <NavLink to='/' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Home </NavLink>
@@ -60,6 +65,7 @@ const Navbar = () => {
     :
     <NavLink to='/login' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className="">Login </button></NavLink>
    }
+   <ToastContainer /> 
    </div>
     
    </div>

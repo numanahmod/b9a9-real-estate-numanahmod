@@ -17,7 +17,7 @@ const Houses = ({book}) => {
                 </div>
 				<div className="p-6 space-y-2">
                 <h3 className="text-2xl font-bold text-black ">{segment_name}</h3>
-                <div className=" text-black"> <span className=" font-bold">For: </span> {status} </div>
+                <div className=" text-black"> <span className=" font-bold">Status: </span> {status} </div>
                     <p className="font-bold text-green-600 gap-10"> <span>#{facilities[0]}</span> <span className="pl-10"> #{facilities[1]}</span> </p>
 
 					

@@ -43,7 +43,7 @@ const id = property.find((i) => i.Id == Id);
                 '>Location: </span> <span className='text-xl text-green-800 fond-bold flex'> <IoLocationOutline className='mt-1' /> {location} </span> </a>
 				</li>
 				<li>
-					<a rel="noopener noreferrer" href="#" className="hover:underline flex"> <span className=' text-red-500  font-extrabold text-xl pr-[60px]'>For: </span> <span className='text-xl text-green-800 fond-bold flex '>    {status} </span> </a>
+					<a rel="noopener noreferrer" href="#" className="hover:underline flex"> <span className=' text-red-500  font-extrabold text-xl pr-[37px]'>Status: </span> <span className='text-xl text-green-800 fond-bold flex '>    {status} </span> </a>
 				</li>
 				<li>
 					<a rel="noopener noreferrer" href="#" className="hover:underline flex"> <span className='text-red-800 font-extrabold text-xl pr-12'>Price: </span> <span className='text-xl text-green-800 fond-bold flex'>   {price} </span> </a>
