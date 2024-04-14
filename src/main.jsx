@@ -19,10 +19,11 @@ import Contact from './Pages/Contact';
 import Blogs from './Pages/Blogs';
 import ProfileUpdate from './Pages/ProfileUpdate';
 import ViewProperties from './Pages/ViewProperties';
-import LogIn from './Pages/LogIn';
+
 import Register from './Pages/Register';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
+import YourAccountLogIn from './Pages/YourAccountLogIn';
 
 
 const router = createBrowserRouter([
@@ -57,13 +58,14 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact></Contact>
       },
-      {
-        path: "/login",
-        element: <LogIn></LogIn>
-      },
+      
       {
         path: "/register",
         element: <Register> </Register>
+      },
+      {
+        path: "/yourAccountLogin",
+        element: <YourAccountLogIn></YourAccountLogIn>
       },
       
      

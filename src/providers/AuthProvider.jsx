@@ -4,6 +4,8 @@ import app from "../firebase/Firebase.config";
 
 
 export const AuthContext = createContext(null)
+
+
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user, setUser ] = useState(null);
@@ -19,6 +21,8 @@ const AuthProvider = ({children}) => {
     setLoading(true);
       return signInWithEmailAndPassword( auth, email, password);
    }
+
+   
 
    const logOut = () => {
     setLoading(true);

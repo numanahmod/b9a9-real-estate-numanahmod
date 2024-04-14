@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink to='/profileUpdate' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Update profile  </NavLink>
         <NavLink to='/blogs'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Blogs  </NavLink>
         <NavLink to='/contact'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Contact   </NavLink>
-        <NavLink to='/login'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>
+        <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> LogIn    </NavLink>
    </>
     return (
         <div>
@@ -63,7 +63,7 @@ const Navbar = () => {
     user ? 
     <button onClick={handleLogout} className="btn "> LogOut </button>
     :
-    <NavLink to='/login' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className="">Login </button></NavLink>
+    <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className="">Login </button></NavLink>
    }
    <ToastContainer /> 
    </div>
