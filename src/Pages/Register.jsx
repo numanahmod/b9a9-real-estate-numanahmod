@@ -34,7 +34,7 @@ const Register = () => {
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="username" className="block font-bold">Photo URL</label>
-			<input type="text" name="photo" id="username" placeholder="photo URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
+			<input type="file" name="url" id="username" placeholder="photo URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
 		</div>
         <div>
 				<label htmlFor="email" className="block mb-2 font-bold">Email address</label>
