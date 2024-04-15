@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/profileUpdate",
         loader: () => fetch('/estate.json'),
-        element: <ProfileUpdate></ProfileUpdate>,
+        element: <PrivateRoute><ProfileUpdate></ProfileUpdate></PrivateRoute>,
         
       },
       

@@ -27,7 +27,7 @@ const Blogs  = () => {
 			</svg>
 		</button>
 
-                   </div>
+        </div>
     );
 };
 

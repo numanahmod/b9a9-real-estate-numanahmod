@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 
 const Register = () => {
-    const {createUser }=useContext(AuthContext);
+    const {createUser,  updateUserProfile }=useContext(AuthContext);
+
+	const location = useLocation();
+	const navigate = useNavigate(); 
+	console.log('location in the login page', location);
     const handleRegister = e => {
 		e.preventDefault();
 		console.log(e.currentTarget);
@@ -18,10 +22,10 @@ const Register = () => {
         //create user 
         createUser(email, password)
         .then(result =>{
+			updateUserProfile(username, photo)
+			.then()
             console.log(result.user );        } )
-        .catch(error => {
-            console.error(error);
-        })
+			navigate(location?.state? location.state: '/');
     }
     return (
         <div className="justify-center place-items-center ml-[450px] mb-12">
@@ -34,7 +38,7 @@ const Register = () => {
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="username" className="block font-bold">Photo URL</label>
-			<input type="file" name="url" id="username" placeholder="photo URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
+			<input type="text" name="photo" placeholder="photo URL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
 		</div>
         <div>
 				<label htmlFor="email" className="block mb-2 font-bold">Email address</label>

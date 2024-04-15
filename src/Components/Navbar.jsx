@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink to='/profileUpdate' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Update profile  </NavLink>
         <NavLink to='/blogs'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Blogs  </NavLink>
         <NavLink to='/contact'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Contact   </NavLink>
-        <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>
+       {!user && <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>}
    </>
     return (
         <div>
@@ -51,24 +51,25 @@ const Navbar = () => {
   
 
    <div className="flex gap-4">
-   <div>
+   { !user && <div>
    <NavLink to='/register' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className=""> Register  </button></NavLink>
-   </div>
-   {user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={user.displayName}>
-        <div className="w-10 rounded-full tooltip" data-tip="hello">  
-            <img className=""  alt="Tailwind CSS Navbar component" src={user?.photoURL} />
-        </div>
-      </div> }
+   </div>}
+   
    
    <div>
    {
     user ? 
-    <button onClick={handleLogout} className="btn "> LogOut </button>
+    <button onClick={handleLogout} className="btn bg-amber-500"> LogOut </button>
     :
     <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className="">Login </button></NavLink>
    }
    <ToastContainer /> 
    </div>
+   {user && <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+        <div className="w-10 rounded-full" >  
+            <img className=""  alt="Please, reload" src={user?.photoURL} />
+        </div>
+      </div> }
     
    </div>
   </div>

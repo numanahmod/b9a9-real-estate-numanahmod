@@ -4,13 +4,13 @@ import { AuthContext } from "../providers/AuthProvider";
 
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../firebase/Firebase.config";
-import { useState } from "react";
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const YourAccountLogIn = () => {
-    const [user, setUser] = useState(null);
+    
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
@@ -25,7 +25,8 @@ const YourAccountLogIn = () => {
 	console.log('location in the login page', location);
 	const handleLogin = e => {
 		e.preventDefault();
-        toast('Login successfully')
+        toast.success('Login successfully')
+   
 		console.log(e.currentTarget);
 		const form = new FormData(e.currentTarget);
 		const email = form.get('email');
@@ -50,9 +51,9 @@ const YourAccountLogIn = () => {
         .then(result =>{
          const loggedInUser = result.user;
          console.log(loggedInUser);
-         setUser(loggedInUser);
+       
 
-         toast('Login successfully with Google')
+         toast.success('Login successfully with Google')
          navigate(location?.state? location.state: '/');
         })
         .catch(error => {
@@ -64,8 +65,8 @@ const YourAccountLogIn = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
-            setUser(loggedUser);
-            toast('Login successfully with Github')
+          
+            toast.success('Login successfully with Github')
             navigate(location?.state? location.state: '/');
         })
         .catch(error => {
@@ -78,11 +79,7 @@ const YourAccountLogIn = () => {
             <div className="justify-center place-items-center ml-[450px] mb-12">
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 mt-12 ">
                
-            { user && <div>
-                    <h3> User: {user.displayName} </h3>
-                    
-        </div>
-             }
+            
 	<h1 className="text-2xl font-bold text-center ">Login</h1>
     
 	<form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
