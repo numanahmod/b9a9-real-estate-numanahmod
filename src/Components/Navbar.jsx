@@ -26,6 +26,9 @@ const Navbar = () => {
         <NavLink to='/blogs'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Blogs  </NavLink>
         <NavLink to='/contact'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Contact   </NavLink>
        {!user && <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>}
+       { !user && 
+        <NavLink to='/register' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}>  Register </NavLink>
+        }
    </>
     return (
         <div>
@@ -39,7 +42,7 @@ const Navbar = () => {
       {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold">  <BsFillHouseHeartFill />Your Dream House </a>
+    <a className="btn btn-ghost  lg:text-xl md:text-xl lg:font-bold md:font-bold">  <BsFillHouseHeartFill />Your Dream House </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-3">
@@ -51,9 +54,7 @@ const Navbar = () => {
   
 
    <div className="flex gap-4">
-   { !user && <div>
-   <NavLink to='/register' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className=""> Register  </button></NavLink>
-   </div>}
+  
    
    
    <div>
@@ -61,7 +62,7 @@ const Navbar = () => {
     user ? 
     <button onClick={handleLogout} className="btn bg-amber-500"> LogOut </button>
     :
-    <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> <button className="">Login </button></NavLink>
+    <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Login </NavLink>
    }
    <ToastContainer /> 
    </div>

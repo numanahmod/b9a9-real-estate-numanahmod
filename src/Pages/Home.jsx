@@ -48,7 +48,7 @@ const Home = () => {
 </div>
             
             {/* Houses */}
-            <h1 className='text-center text-2xl font-bold mb-8'> Properties for rent and sale  </h1>
+            <h1 className='text-center text-2xl font-bold mb-8'> Our Estates for rent and sale  </h1>
 
             <section className="text-gray-100">
 	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">

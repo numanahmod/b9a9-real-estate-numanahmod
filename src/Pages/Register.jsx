@@ -28,7 +28,7 @@ const Register = () => {
 			navigate(location?.state? location.state: '/');
     }
     return (
-        <div className="justify-center place-items-center ml-[450px] mb-12">
+        <div className="justify-center place-items-center lg:ml-[450px] md:ml-[200px] m-5  mb-12">
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 mt-12 ">
 	<h1 className="text-2xl font-bold text-center ">Please, register </h1>
 	<form onSubmit={handleRegister} noValidate="" action="" className="space-y-6">

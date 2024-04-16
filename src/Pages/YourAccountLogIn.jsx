@@ -76,7 +76,7 @@ const YourAccountLogIn = () => {
     return (
         <div>
            
-            <div className="justify-center place-items-center ml-[450px] mb-12">
+            <div className="justify-center place-items-center lg:ml-[450px] md:ml-[200px] m-5 mb-12">
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 mt-12 ">
                
             
