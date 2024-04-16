@@ -12,9 +12,14 @@ const Navbar = () => {
 
   const handleLogout = () =>{
     logOut()
-    .then()
+    .then(result=>{
+      toast.success('Your account is logged out')
+			console.log(result.user);
+			
+    })
     .catch()
-    toast('Your account is logged out')
+ 
+   
     
   }
 

@@ -1,12 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../firebase/Firebase.config";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 
 
 const YourAccountLogIn = () => {
@@ -18,6 +19,8 @@ const YourAccountLogIn = () => {
     
     const {login } = useContext(AuthContext);
 
+	const [showPassword, setShowPassword] = useState(false);
+
 	
 	
 	const location = useLocation();
@@ -25,7 +28,7 @@ const YourAccountLogIn = () => {
 	console.log('location in the login page', location);
 	const handleLogin = e => {
 		e.preventDefault();
-        toast.success('Login successfully')
+        
    
 		console.log(e.currentTarget);
 		const form = new FormData(e.currentTarget);
@@ -35,44 +38,53 @@ const YourAccountLogIn = () => {
 	login(email, password)
   .then(result=>{
 			console.log(result.user);
-
+			toast.success('Login successfully')
  // navigate after login 
- navigate(location?.state? location.state: '/');		
+ navigate(location?.state? location.state: '/');
+	
  })
 
  
  .catch(error => {
 			console.error(error) 
+ toast.error('Email or Password does not match with registered account')
 		})
+		// toast.success('Login successfully')
 		}
 
     const handleGoogleLogin = () => {
         signInWithPopup(auth, provider)
         .then(result =>{
          const loggedInUser = result.user;
+ toast.success('Login successfully with Google')
          console.log(loggedInUser);
        
 
-         toast.success('Login successfully with Google')
-         navigate(location?.state? location.state: '/');
+       
+        
         })
         .catch(error => {
          console.log('error', error.message);
         })
+		
+		navigate(location?.state? location.state: '/');
+		
     }
     const handleGithubLogin = () =>{
         signInWithPopup(auth, githubProvider)
         .then(result => {
             const loggedUser = result.user;
+			toast.success('Login successfully with Github')
             console.log(loggedUser);
           
-            toast.success('Login successfully with Github')
+        
             navigate(location?.state? location.state: '/');
         })
         .catch(error => {
             console.log(error);
         })
     }
+
     return (
         <div>
            
@@ -89,8 +101,15 @@ const YourAccountLogIn = () => {
 			</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="password" className="block font-bold">Password</label>
-			<input type="password" name="password" id="password" placeholder="your password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
-			<div className="flex justify-end text-xs text-gray-400">
+			<div className="flex relative">
+			<input type={ showPassword ? "text" : "password"} name="password" id="password" placeholder="password"  className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required/>
+			<span className="absolute top-3 right-2 text-white" onClick={() => setShowPassword(!showPassword)}>
+				{
+					showPassword? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+				}
+			</span>
+			</div>
+			<div className="flex justify-end text-xs text-red-600">
 				<a rel="noopener noreferrer" href="#">Forgot Password?</a>
 			</div>
 		</div>
@@ -100,7 +119,7 @@ const YourAccountLogIn = () => {
     
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
-		<p className="px-3 text-sm text-gray-400">Login with social accounts</p>
+		<p className="px-3 text-sm text-gray-950">Login with social accounts</p>
 		<div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
 	</div>
 	<div className="flex justify-center space-x-4">
@@ -118,9 +137,9 @@ const YourAccountLogIn = () => {
 			</svg>
             
 		</button>
-        <ToastContainer />
+    
 	</div>
-	<p className="text-xs text-center sm:px-6 text-gray-400"> Do not have an account?
+	<p className="text-xs text-center sm:px-6 text-gray-950"> Do not have an account?
 		<Link to='/register' rel="noopener noreferrer" href="#" className="underline text-blue-800 font-bold"> Register </Link>
 	</p>
 </div>
