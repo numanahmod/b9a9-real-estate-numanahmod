@@ -58,6 +58,9 @@ const YourAccountLogIn = () => {
          const loggedInUser = result.user;
  toast.success('Login successfully with Google')
          console.log(loggedInUser);
+	// navigate after login 
+ navigate(location?.state? location.state: '/');
+	
        
 
        
@@ -76,6 +79,9 @@ const YourAccountLogIn = () => {
             const loggedUser = result.user;
 			toast.success('Login successfully with Github')
             console.log(loggedUser);
+			// navigate after login 
+ navigate(location?.state? location.state: '/');
+	
           
         
             navigate(location?.state? location.state: '/');

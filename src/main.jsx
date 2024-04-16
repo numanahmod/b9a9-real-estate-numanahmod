@@ -16,7 +16,7 @@ import Home from './Pages/Home';
 
 import ErrorPage from './Components/ErrorPage';
 import Contact from './Pages/Contact';
-import Blogs from './Pages/Blogs';
+
 import ProfileUpdate from './Pages/ProfileUpdate';
 import ViewProperties from './Pages/ViewProperties';
 
@@ -50,13 +50,10 @@ const router = createBrowserRouter([
         
       },
       
-      {
-        path:"/blogs",
-        element: <Blogs></Blogs>
-      },
+      
       {
         path: "/contact",
-        element: <Contact></Contact>
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>
       },
       
       {

@@ -28,7 +28,7 @@ const Navbar = () => {
    const navLinks =  <>
         <NavLink to='/' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Home </NavLink>
         <NavLink to='/profileUpdate' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Update profile  </NavLink>
-        <NavLink to='/blogs'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Blogs  </NavLink>
+        
         <NavLink to='/contact'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Contact   </NavLink>
        {!user && <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>}
        { !user && 
