@@ -1,14 +1,14 @@
-**My Website Name: **Your Dream Home**
+**The Website Name: **Your Dream Home**
 
 **Live Site URL:** [Your Dream Home]()
 
 ### Features and Characteristics: To make this website, I have used:
 
+* javaScript , css , html
+
 * tailwindcss.com
   
-* daisyUI.com
-  
-* mambaiUi.com
+* daisyUI.com and mambaiUi.com
   
 * firebase.google.com
   

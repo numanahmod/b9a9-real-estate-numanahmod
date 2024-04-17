@@ -72,8 +72,8 @@ const Contact = () => {
 				<span className="mb-1">Message</span>
 				
 			</label>
-			<input rows="4" type='text' name="userMessage" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-600"/> 
-			<button  type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 text-gray-900 focus:ring-violet-400 hover:ring-violet-400">Submit</button>
+			<input rows="4" type='text' name="userMessage" className="block w-full h-20 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-600"/> 
+			<button className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 text-gray-900 focus:ring-violet-400 hover:ring-violet-400">Submit</button>
 		</form>
 	</div>
 </section>
