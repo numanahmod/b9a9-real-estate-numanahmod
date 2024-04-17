@@ -53,7 +53,7 @@ const id = property.find((i) => i.Id == Id);
 				</li>
 			</ul>
 		</div> 
-        <Link to='/contact'><button className=' btn btn-secondary ml-60 mt-6'> Contact  </button></Link>
+        <Link to='/contact'><button className=' btn btn-secondary lg:ml-60 ml-32 mt-6'> Contact  </button></Link>
 	</div>
 </div>
         </div>
