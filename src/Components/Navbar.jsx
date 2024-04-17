@@ -30,7 +30,7 @@ const Navbar = () => {
         <NavLink to='/profileUpdate' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}> Update profile  </NavLink>
         
         <NavLink to='/contact'className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Contact   </NavLink>
-       {!user && <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>}
+       {/* {!user && <NavLink to='/yourAccountLogin' className={({isActive})=> isActive? 'btn  font-bold btn2':'font-bold btn'}> Login    </NavLink>} */}
        { !user && 
         <NavLink to='/register' className={({isActive})=> isActive? 'btn font-bold btn2':'font-bold btn'}>  Register </NavLink>
         }

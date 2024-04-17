@@ -6,6 +6,7 @@ import slider3 from '/slider3.jpg'
 import slider4 from '/slider4.jpg'
 import { useLoaderData } from 'react-router-dom';
 import Houses from '../Components/Houses'
+import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
 
@@ -14,7 +15,9 @@ const Home = () => {
 
     return (
         <div>
-           
+           <Helmet>
+            <title>Your Dream Home | Home </title>
+           </Helmet>
             {/* banner */}
             <div className="carousel  bg-base-200 m-12 rounded-lg">
   <div id="slide1" className="carousel-item relative w-full h-96">

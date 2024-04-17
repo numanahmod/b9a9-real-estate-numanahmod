@@ -7,6 +7,7 @@ import app from "../firebase/Firebase.config";
 
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -93,7 +94,9 @@ const YourAccountLogIn = () => {
 
     return (
         <div>
-           
+           <Helmet>
+            <title> Your Dream Home |Login </title>
+           </Helmet>
             <div className="justify-center place-items-center lg:ml-[450px] md:ml-[200px] m-5 mb-12">
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 mt-12 ">
                

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
 
 
@@ -5,20 +6,20 @@ const Contact = () => {
 	
     
 	
-	const handleSubmit = () =>{
-		// e.preventDefault();
-		// console.log(e.currentTarget);
-		// const form = new FormData(e.currentTarget)
+	const handleSubmit = (e) =>{
+		e.preventDefault();
+		console.log(e.currentTarget);
+		const form = new FormData(e.currentTarget)
         
-		// const username = form.get('username');
+		const username = form.get('username');
 		
-		// const email = form.get('email');
+		const email = form.get('email');
         
-		// const userMessage = form.get('userMessage');
+		const userMessage = form.get('userMessage');
 
-        // console.log(username, email, userMessage );
+        console.log(username, email, userMessage );
 		
-			toast.success('Successfully, sent your message')
+		return	toast.success('Successfully, sent your message')
 
 	
 
@@ -28,6 +29,9 @@ const Contact = () => {
 
     return (
         <div className="mt-2">
+		<Helmet>
+            <title>Your Dream Home | Contact </title>
+           </Helmet>
             <section className="py-6 bg-gray-800 text-gray-50">
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
 		<div className="py-6 md:py-0 md:px-6">
@@ -66,8 +70,9 @@ const Contact = () => {
 			</label>
 			<label className="block">
 				<span className="mb-1">Message</span>
-				<textarea rows="4" type='text' name="userMessage" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-600"> </textarea>
+				
 			</label>
+			<input rows="4" type='text' name="userMessage" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 bg-gray-600"/> 
 			<button  type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 text-gray-900 focus:ring-violet-400 hover:ring-violet-400">Submit</button>
 		</form>
 	</div>

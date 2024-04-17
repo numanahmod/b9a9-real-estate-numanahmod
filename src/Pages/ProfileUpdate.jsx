@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import '../Components/Navbar.css'
 import { AuthContext } from '../providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -34,6 +35,9 @@ const ProfileUpdate = () => {
     return (
        <>
        <div className=" min-h-screen">
+       <Helmet>
+            <title> Your Dream Home | Update Profile </title>
+           </Helmet>
   <div className="hero-content flex-col lg:flex-row-reverse gap-40">
     <div className="text-center lg:ml-32 lg:mr-32 border-2 p-6 bg-orange-100 mt-6">
     <h1 className='text-2xl font-bold mb-8'>My profile </h1>

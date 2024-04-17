@@ -1,5 +1,6 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
+import { Helmet } from 'react-helmet-async';
 
 const ViewProperties = () => {
     
@@ -11,7 +12,9 @@ const id = property.find((i) => i.Id == Id);
     const {image, segment_name,estate_title, description, status, facilities, location, price, area } = id; 
     return (
         <div> 
-            
+            <Helmet>
+            <title> Your Dream Home | HN: {Id} </title>
+           </Helmet>
             <div className="mt-12 mb-8 max-w-2xl px-6 py-16 mx-auto space-y-12 border-2">
                 
 	<article className="space-y-8 bg-gray-800 text-gray-50">
