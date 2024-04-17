@@ -1,8 +1,17 @@
-# React + Vite
+**My Website Name: **Your Dream Home**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [Your Dream Home]()
 
-Currently, two official plugins are available:
+### Features and Characteristics: To make this website, I have used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* tailwindcss.com
+  
+* daisyUI.com
+  
+* mambaiUi.com
+  
+* firebase.google.com
+  
+* react-helmet-async
+
+**NPM Package Name for Challenges Tasks:** eye icon for password showing and hiding: `npm install react-icons --save`
